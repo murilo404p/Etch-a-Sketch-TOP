@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Etch-a-Sketch</h1>
+    </header>
+
+    <section class="container">
+        <div>
+            <div class="border-grid">
+                <div class="grid"></div>
+            </div>
+        </div>
+        <div class="container-attributes">
+            <div class="attributes">
+                <label class="name">Resolution: 16x16</label>
+                <input type="range" min="2" max="100" id="range" value="16">
+            </div>
+            <div class="attributes">
+                <p>Grid</p>
+                <input type="checkbox" id="checkbox">
+            </div>
+            <div class="attributes">
+                <p>Color</p>
+                <input type="color" id="inputcolor">
+            </div>
+            <div class="attributes">
+                <button class="button-clear">Clear</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
