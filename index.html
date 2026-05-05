@@ -14,18 +14,18 @@
 
     <section class="container">
         <div class="border-grid">
-            <div class="grid"></div>
+            <div class="grid" id="blocksGrid"></div>
         </div>
         <div class="container-attributes">
             <div class="attributes">
-                <label id="name">Resolution: </label>
-                <input type="range" class="range" min="2" max="100" id="range" value="16">
+                <label class="name" id="resolution">Resolution: </label>
+                <input type="range" class="range" min="2" max="64" id="range" value="16">
             </div>
             <div class="attributes">
                 <button class="button" onclick="randomColor()">Random Color</button>
             </div>
             <div class="attributes">
-                <label id="name">Color</label>
+                <label class="name">Color</label>
                 <input type="color" id="inputcolor">
             </div>
             <div class="attributes">
