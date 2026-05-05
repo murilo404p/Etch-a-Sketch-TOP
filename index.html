@@ -13,26 +13,23 @@
     </header>
 
     <section class="container">
-        <div>
-            <div class="border-grid">
-                <div class="grid"></div>
-            </div>
+        <div class="border-grid">
+            <div class="grid"></div>
         </div>
         <div class="container-attributes">
             <div class="attributes">
-                <label class="name">Resolution: 16x16</label>
-                <input type="range" min="2" max="100" id="range" value="16">
+                <label id="name">Resolution: </label>
+                <input type="range" class="range" min="2" max="100" id="range" value="16">
             </div>
             <div class="attributes">
-                <p>Grid</p>
-                <input type="checkbox" id="checkbox">
+                <button class="button" onclick="randomColor()">Random Color</button>
             </div>
             <div class="attributes">
-                <p>Color</p>
+                <label id="name">Color</label>
                 <input type="color" id="inputcolor">
             </div>
             <div class="attributes">
-                <button class="button-clear">Clear</button>
+                <button class="button">Clear</button>
             </div>
         </div>
     </section>
