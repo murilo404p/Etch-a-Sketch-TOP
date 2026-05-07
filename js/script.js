@@ -1,6 +1,7 @@
 let range = document.getElementById("range");
 let blocksGrid = document.getElementById("blocksGrid");
 let mode;
+let selectColor = document.getElementById("inputColor");
 
 range.addEventListener("input", function(e) {
     gridValue = e.target.value;
@@ -18,6 +19,7 @@ function createGrid(size) {
         createDiv.style.width = square + "%";
         createDiv.style.height = square + "%";
         createDiv.style.cursor = "pointer";
+        
 
         createDiv.addEventListener("mouseover", function(e) {
             if (mode === "random") {
@@ -26,9 +28,10 @@ function createGrid(size) {
                 green = Math.floor(Math.random() * 256);
                 blue = Math.floor(Math.random() * 256);
                 e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            } else if (mode === "color") {
+                e.target.style.backgroundColor = selectColor.value;
             }
         });
-
     }
 }
 
@@ -37,5 +40,13 @@ function randomColor() {
 }
 
 function buttonClear() {
-    mode = "clear"
+    let pixel = document.querySelectorAll(".pixel");
+    pixel.forEach(pixel => {
+        pixel.style.backgroundColor = '';
+    });
 }
+
+function color() {
+    mode = "color";
+}
+
