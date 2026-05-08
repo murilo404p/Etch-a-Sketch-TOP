@@ -60,4 +60,3 @@ function buttonClear() {
 function color() {
     mode = "color";
 }
-
